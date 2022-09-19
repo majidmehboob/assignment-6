@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background:repeating-linear-gradient(200deg,black,yellow,blue);
+        height:100vh;
+        width:100%;
+       
+    }
+   
+    .form{
+        
+        display:none;
+        animation: animate 2s linear;
+    }
+    @keyframes animate{
+        0%{
+            background:repeating-linear-gradient(200deg,black,yellow,blue);
+        }
+        100%{
+            background:repeating-linear-gradient(200deg,rgb(187, 13, 13),yellow,blue);
+        }
+        
+    }
+    .form.active{
+        display:block;
+    }
+</style>
+<body>
+
+    <nav >
+   <a href="#"><h1 class="h1">login</h1></a> 
+   <a href="#"><h1>topLast</h1></a>
+    </nav>
+    <div class="form">
+        <h1>the last insaan</h1>
+        <p>body language</p>
+        <img src="../profile.jpg" alt="">
+        
+    </div>
+    <script>
+        let form=document.querySelector('.form');
+        document.querySelector('.h1').onclick=()=>{
+            form.classList.toggle('active')
+        }
+
+     function toplist(){
+          form.value=' ';
+     }
+      
+    </script>
+</body>
+</html>
